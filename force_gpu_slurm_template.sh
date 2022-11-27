@@ -38,8 +38,7 @@ echo "test"
 
 
 ### Change to staging directory for fast read/write, output some system variables for monitoring
-####cd /nas/home/mithun/piranha_atelier_spancat/
-cd /nas/home/mithun/v2_piranha_slurm_saga/
+cd /nas/home/mithun/piranha_atelier_spancat/
 
 echo "Current working directory: $(pwd)"
 echo "Starting run at: $(date)"
@@ -59,11 +58,12 @@ nvcc --version
 ##pip install -r requirements.txt
 ##pip install --no-build-isolation --editable '.[cuda-autodetect,transformers,lookups]'
 ##python -m spacy download en_core_web_trf
-
+lshw -C display
+lspci
 
 ### Add your python code here
 ##python -m spacy download en_core_web_trf
-python -m spacy train config.cfg --output ./output --paths.train ./corpus/train.spacy --paths.dev ./corpus/dev.spacy
+python -m spacy train config.cfg --gpu-id 0 --output ./output --paths.train ./corpus/train.spacy --paths.dev ./corpus/dev.spacy
 
 ###python3 "$SOURCE_DIR"/script.py "$SLURM_ARRAY_TASK_ID"
 
