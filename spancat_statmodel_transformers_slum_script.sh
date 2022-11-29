@@ -47,6 +47,9 @@ echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
 echo "This is job $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT jobs."
 echo ""
 
+cd configs
+cp statmodel_spancat_gpu.cfg configs.cfg
+cd ..
 
 
 nvcc --version
