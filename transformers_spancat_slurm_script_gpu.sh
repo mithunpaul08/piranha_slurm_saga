@@ -5,7 +5,7 @@
 ###SBATCH --mem-per-cpu=1G                # Memory allocated per cpu core. Default is 1GB.
 #SBATCH --cpus-per-task=1               # Number of CPU needed. Unless your code is designed to utilize multiple threads this number should stay 1.
 ###SBATCH --gres=gpu:rtx2080ti:4                # Number of GPU cores needed. Format is gpu:<GPU_type>:<number>. <GPU_type> is one of the following: k20, k40, k80, or p100.
-#SBATCH --job-name=mithun_piranha_spancat             # The name of this job. If removed the job will have name of your shell script.
+#SBATCH --job-name=mithun_piranha_spancat_transformers             # The name of this job. If removed the job will have name of your shell script.
 #SBATCH --output=%x-%j.out              # The name of the file output. %x-%j means JOB_NAME-JOB_ID. If removed output will be in file slurm-JOB_ID.
 #SBATCH --mail-user=mithun@isi.edu       # Email address for email notifications to be sent to.
 #SBATCH --mail-type=END                 # Type of notifications to receive. Other options includes BEGIN, END, FAIL, REQUEUE and more.
