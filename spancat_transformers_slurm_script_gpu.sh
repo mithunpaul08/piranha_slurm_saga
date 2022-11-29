@@ -41,6 +41,11 @@ echo "test"
 ####cd /nas/home/mithun/piranha_atelier_spancat/
 cd /nas/home/mithun/mithun_fork_toxic_spans
 
+cd configs
+cp transformers_spancat_gpu.cfg config.cfg
+cd ..
+
+
 echo "Current working directory: $(pwd)"
 echo "Starting run at: $(date)"
 echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
