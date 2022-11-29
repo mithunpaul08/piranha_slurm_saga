@@ -39,7 +39,6 @@ echo "test"
 
 ### Change to staging directory for fast read/write, output some system variables for monitoring
 ####cd /nas/home/mithun/piranha_atelier_spancat/
-cd /nas/home/mithun/mithun_fork_toxic_spans
 
 echo "Current working directory: $(pwd)"
 echo "Starting run at: $(date)"
@@ -47,6 +46,7 @@ echo "Job Array ID / Job ID: $SLURM_ARRAY_JOB_ID / $SLURM_JOB_ID"
 echo "This is job $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT jobs."
 echo ""
 
+cd /nas/home/mithun/mithun_fork_toxic_spans_for_statmodel_training
 cd configs
 cp statmodel_spancat_gpu.cfg config.cfg
 cd ..
